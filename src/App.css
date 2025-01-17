@@ -1,0 +1,44 @@
+body {
+  margin: 2rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.header-container {
+  gap: 1rem;
+  position: relative;
+}
+
+.header-asset {
+  position: absolute;
+  right: 0;
+  margin: -2rem;
+}
+
+.hero-container {
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.header-container,
+.hero-container {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
