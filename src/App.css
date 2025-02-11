@@ -1,5 +1,7 @@
 body {
-  margin: 2rem;
+  background-image: url("../src/assets/images/pattern-lines.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #root {
@@ -8,8 +10,17 @@ body {
   gap: 2rem;
 }
 
+section:first-child {
+  margin: 1.5rem 1rem 0 1rem;
+}
+
+section {
+  margin: 0 1rem;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
 
 .header-container {
@@ -17,22 +28,18 @@ h1 {
   position: relative;
 }
 
-.header-asset {
-  position: absolute;
-  right: 0;
-  margin: -2rem;
-}
-
 .hero-container {
   flex-direction: column;
   text-align: center;
   gap: 0.5rem;
+  margin: 0 1.5rem;
 }
 
 .hero-description {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   opacity: 0.8;
+  line-height: 1.2;
 }
 
 .header-container,
@@ -41,4 +48,112 @@ h1 {
   color: white;
   display: flex;
   justify-content: center;
+}
+
+/* Form */
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.input-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+input:not(input[type="file"]) {
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  min-height: 2.5rem;
+}
+
+/* Hidden input wrapper */
+
+.upload-input-wrapper {
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  min-height: 6rem;
+}
+
+input[type="file"] {
+  min-height: 6rem;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.upload-info-span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.6rem;
+}
+
+.upload-instructions-span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Inconsolata";
+  padding: 0 0.75rem;
+}
+
+/* button */
+
+.submit-btn {
+  background-color: salmon;
+  border-radius: 8px;
+  border: none;
+  color: #020635;
+  font-family: "Inconsolata";
+  font-size: 1rem;
+  font-weight: 800;
+  min-height: 3rem;
+}
+
+.upload-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 0.3rem;
+}
+
+/* SVGs */
+
+.header-squiggly-line {
+  position: absolute;
+  right: 0;
+  transform: translate(1rem);
+  width: 5rem;
+}
+
+.pattern-circle-svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(2.5rem, -2.5rem);
+  z-index: -1;
+}
+
+.bottom-line-svg {
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
